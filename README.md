@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Feedback UI
+
+![image](https://user-images.githubusercontent.com/36509669/149638511-7cfb7439-ba7f-4e72-bca6-f7612bebdf18.png)
+
+# How it works?
+
+Until the end of the application, you can git clone this project and simply execute 'npm start' in any terminal (tipically done in Visual Studio Code terminal).
+
+
+
+
+
+# +Info | Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
