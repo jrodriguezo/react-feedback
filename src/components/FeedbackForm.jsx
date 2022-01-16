@@ -3,7 +3,7 @@ import Button from "./Button"
 import Form from "./shared/Form"
 import RatingSelect from "./RatingSelect"
 
-function FeedbackForm({select}) {
+function FeedbackForm({select, handleAdd}) {
     const [text, setText] = useState('')
     const [rating, setRating] = useState(10)
     const [btnDisabled, setBtnDisabled] = useState(true)
@@ -24,10 +24,23 @@ function FeedbackForm({select}) {
         setText(e.target.value)
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if(text.trim().length >= 10){
+            const newFeedback = {
+                rating: rating,
+                text: text
+            }
+
+            handleAdd(newFeedback)
+            setText('') //submitted
+        }
+    }
+
     return (
         <Form>
             <div className="container">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h2>How would you rate your service with us?</h2>
                     <RatingSelect select={(rating) => setRating(rating)}/>
                     <div className="input-group">
