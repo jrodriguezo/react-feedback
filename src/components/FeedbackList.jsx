@@ -5,7 +5,7 @@ import FeedbackItem from "./FeedbackItem"
 function FeedbackList({feedback, handleDelete}) {
 
     if(!feedback || feedback.length === 0){
-        return <p className="warning">Not feedbacks available!</p>
+        return <p className="warning">No feedbacks available yet</p>
     }
 
     return (
